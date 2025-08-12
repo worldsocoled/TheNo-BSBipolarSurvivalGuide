@@ -8,13 +8,19 @@
     <meta name="keywords" content="bipolar disorder, mental health, relationships, crisis management, boundaries, support, survival guide, Nichole Higgins">
     <meta name="author" content="Nichole Higgins">
     
+    <!-- SEO Enhancements -->
+    <link rel="canonical" href="https://worldsocoled.github.io/TheNo-BSBipolarSurvivalGuide">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://worldsocoled.github.io/TheNo-BSBipolarSurvivalGuide/BookCover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
     <!-- Open Graph tags for social media -->
     <meta property="og:title" content="The No-BS Bipolar Survival Guide by Nichole Higgins">
     <meta property="og:description" content="A raw, real-world manual for partners and families dealing with bipolar disorder">
     <meta property="og:type" content="book">
     <meta property="og:url" content="https://a.co/d/5BPNBb1">
     
-    <!-- Schema.org markup for Google -->
+    <!-- Enhanced Schema.org markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -22,10 +28,21 @@
         "name": "The No-BS Bipolar Survival Guide: How to Handle the Highs, the Lows, and Not Lose Your Sh*t",
         "author": {
             "@type": "Person",
-            "name": "Nichole Higgins"
+            "name": "Nichole Higgins",
+            "url": "https://worldsocoled.github.io/TheNo-BSBipolarSurvivalGuide/#author"
         },
         "description": "A raw, real-world manual for the exhausted, the confused, and the terrified dealing with bipolar disorder",
-        "genre": "Mental Health, Self-Help"
+        "genre": "Mental Health, Self-Help",
+        "image": "https://worldsocoled.github.io/TheNo-BSBipolarSurvivalGuide/BookCover.jpg",
+        "publisher": "The Phantom Ink Creative",
+        "datePublished": "2025-08-09",
+        "isbn": "9798297361324",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://a.co/d/5BPNBb1",
+            "priceCurrency": "USD",
+            "price": "9.99"
+        }
     }
     </script>
     
@@ -65,24 +82,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         
-        /* Updated logo styling for the image */
         .logo {
-            height: 80px; /* Set a fixed height for the logo */
+            height: 80px;
             transition: all 0.3s ease;
         }
         
         .logo:hover {
-            transform: scale(1.05); /* Slight scale on hover */
+            transform: scale(1.05);
         }
 
-        /* Old text logo styling */
-        .logo-text {
-            font-size: 1.6rem;
-            font-weight: 300;
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
             color: #1a1a1a;
-            letter-spacing: -0.5px;
         }
         
         .nav-links {
@@ -126,6 +144,7 @@
             color: #1a1a1a;
             background-image: url('background.png');
             background-size: cover;
+            background-position: center;
         }
         
         .hero h1 {
@@ -196,6 +215,7 @@
         .main-content {
             background: white;
             padding: 5rem 0;
+            margin-top: 120px;
         }
         
         .book-section {
@@ -252,6 +272,26 @@
         
         .book-description p {
             margin-bottom: 1.5rem;
+        }
+
+        .book-description ul {
+            list-style-type: none;
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .book-description li {
+            margin-bottom: 0.7rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .book-description li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1a1a1a;
+            font-weight: bold;
         }
         
         .key-points {
@@ -448,6 +488,42 @@
             color: white;
             transform: translateY(-3px);
         }
+
+        .chapter-preview {
+            background: #f9f9f9;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .chapter-preview h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .chapter-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .chapter-item {
+            background: white;
+            padding: 1.5rem;
+            border-left: 3px solid #e1e1e1;
+            transition: all 0.3s ease;
+        }
+
+        .chapter-item:hover {
+            transform: translateY(-5px);
+            border-left-color: #1a1a1a;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
         
         footer {
             background: #111;
@@ -464,7 +540,7 @@
 
         .contact-heading {
             font-size: 1.1rem;
-            color: #ffc0cb; /* baby light pink */
+            color: #ffc0cb;
             margin-top: 1rem;
             font-weight: bold;
         }
@@ -474,16 +550,15 @@
         }
 
         .social-links a {
-            color: #ffc0cb; /* baby light pink */
-            margin: 0 1.0rem; /* extra spacing between links */
+            color: #ffc0cb;
+            margin: 0 1.0rem;
             font-size: 1rem;
             transition: color 0.3s ease;
         }
 
         .social-links a:hover {
-            color: white; /* changes to white when hovered */
+            color: white;
         }
-
         
         @media (max-width: 768px) {
             .book-section,
@@ -495,6 +570,23 @@
             
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                gap: 1.5rem;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
             }
             
             .cta-buttons {
@@ -549,22 +641,6 @@
             }
         }
         
-        .bounce {
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-        
         /* Elegant loading animation */
         .loading {
             opacity: 0;
@@ -587,10 +663,10 @@
 <body>
     <header>
         <nav class="container">
-            <!-- Replaced the text with an image and a link to the homepage -->
             <a href="/" class="logo-link">
-                <img src="logo.png" alt="No-BS Guide Logo" class="logo">
+                <img src="logo.png" alt="No-BS Guide Logo" class="logo" width="200" height="80" loading="lazy">
             </a>
+            <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#book">The Book</a></li>
@@ -614,16 +690,23 @@
             <div class="book-section">
                 <div class="book-cover">
                     <div class="book-placeholder">
-                        <img src="BookCover.jpg" alt="The No-BS Bipolar Survival Guide Cover" style="width: 100%; height: auto;">
-                        <br><br>
+                        <img src="BookCover.jpg" alt="The No-BS Bipolar Survival Guide Book Cover" 
+                             width="350" height="450" loading="lazy" style="width: 100%; height: auto;">
                     </div>
                 </div>
                 <div class="book-info">
                     <h2>Drowning, Resentful, and Exhausted? This is Your Lifeline.</h2>
                     <div class="book-description">
-                        <p>You love someone with bipolar disorder. You've read the other books, the ones that offer platitudes and useless advice like "just be supportive." But what happens when "supportive" advice falls apart at 3 AM during a full-blown manic episode, a shopping spree with your rent money, or weeks of crushing depression?</p>
+                        <p>This guide doesn't pull punches. The No-BS Bipolar Survival Guide is a raw, real-world manual for:</p>
                         
-                        <p>This guide doesn't pull punches. The No-BS Bipolar Survival Guide is a raw, real-world manual for the exhausted, the confused, and the terrified. It's for the partners who live with the emotional whiplash, the financial chaos, the unpredictable rage, and the profound silence of a loved one's mental illness.</p>
+                        <ul>
+                            <li>Partners facing emotional whiplash</li>
+                            <li>Families navigating financial chaos</li>
+                            <li>Loved ones managing unpredictable episodes</li>
+                            <li>Anyone exhausted by therapeutic jargon</li>
+                        </ul>
+                        
+                        <p>You've read other books offering platitudes like "just be supportive." But what happens when that advice falls apart at 3 AM during a full-blown manic episode, a shopping spree with your rent money, or weeks of crushing depression?</p>
                         
                         <p>This isn't a story about love conquering all. It's about surviving a love that can feel like a battlefield and how to not lose your sh*t in the midst of it all.</p>
                     </div>
@@ -660,13 +743,65 @@
         </section>
     </main>
 
+    <section class="chapter-preview">
+    <div class="container">
+        <h3>Inside the Book: Chapter Preview</h3>
+        <div class="chapter-list">
+            <div class="chapter-item">
+                <h4>Chapter 1: Understanding the Storm - What You're Really Dealing With</h4>
+                <p>This chapter is a crash course in the unpredictable weather patterns of bipolar disorder, from sunshine to a kitchen tornado. It's about moving past the fluffy stuff to get a real, honest picture of the chaos you're living with.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 2: The Early Warning System – Detecting Episodes Before They Explode</h4>
+                <p>Think of this as your "oh crap, it's happening" manual, teaching you how to create a mood tracking system before a full-blown crisis hits. The goal isn't to stop the circus, but to see the clown cars pulling up a few hours early.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 3: Crisis Management - When Everything Falls Apart</h4>
+                <p>This is your "break glass in case of emergency" guide for when bipolar disorder says, "Surprise! Everything's on fire now". It's about damage control and keeping your sanity when things go from zero to chaos in a hot second.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 4: The Daily Reality - Managing Life During Stability</h4>
+                <p>Stability isn't rainbows; it’s the calm after the washing machine stops violently shaking, and you know another spin cycle is coming. This chapter gives you the unsexy but crucial strategies for dealing with meds, diet, and sleep while you can.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 5: Addiction - The Brutal Co-Occurring Reality</h4>
+                <p>Congratulations, with addiction in the mix, you’ve been promoted to "CEO of Chaos, Inc." without pay or benefits. This chapter is about setting boundaries and protecting your peace, because you can't love, nag, or threaten someone into sobriety.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 6: The Relationship Survival Guide</h4>
+                <p>This guide is for a relationship that's less rom-com and more medical drama mixed with a horror film. Learn how to communicate without getting pulled into the crazy and figure out if you're paddling a canoe in circles, or if you both are actually trying.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 7: Your Mental Health - The Oxygen Mask Principle</h4>
+                <p>You can’t be the calm in their storm if you’re a storm yourself, so this is your survival guide to putting your own oxygen mask on first. Because setting yourself on fire to keep someone else warm is never the answer.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 8: The Family System - When Kids Are Involved</h4>
+                <p>When your partner's moods are a roller coaster, this is how you become the safety harness for your kids. It’s about protecting them from the chaos and being their steady anchor, without letting them become a stand-in spouse.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 9: Legal and Financial Reality</h4>
+                <p>This is the least romantic chapter, but the most necessary, because one manic weekend can cost you more than a college education. It’s a shield of cold, hard truth for protecting your bank accounts and legal standing.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 10: The Decision No One Can Make for You - When to Stay, When to Go</h4>
+                <p>This is where you answer the question of whether you can really keep doing this without judgment. It helps you honestly assess your situation, understand your red lines, and make a decision based on your truth, not on what others might think.</p>
+            </div>
+            <div class="chapter-item">
+                <h4>Chapter 11: Hope and Recovery - What Success Actually Looks Like</h4>
+                <p>Spoiler alert: recovery doesn't mean a "happily ever after" with no problems; it means upgrading from a rickety wooden roller coaster to a modern one with better brakes[cite: 484, 491]. [cite_start]It's about finding hope in the small victories and accepting that some days, just being stubborn is enough.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <section id="author" class="author-section">
         <div class="container">
             <div class="author-content">
                 <div class="author-photo">
                     <div class="author-placeholder">
-                        <img src="AuthorNichole.png" alt="Nichole Higgins" style="width: 100%; height: auto;">
-                        <br><br>
+                        <img src="AuthorNichole.png" alt="Nichole Higgins - Author of The No-BS Bipolar Survival Guide" 
+                             width="280" height="280" loading="lazy" style="width: 100%; height: auto;">
                     </div>
                 </div>
                 <div class="author-info">
@@ -692,16 +827,16 @@
     </section>
 
     <footer>
-    <div class="container">
-        <p>&copy; 2025 Nichole Higgins | The Phantom Ink Creative. All rights reserved.</p>
-        <p class="contact-heading">💌 Contact me!</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/nichole-higgins423/" target="_blank">LinkedIn</a>
-            <a href="https://medium.com/@nhiggins11688" target="_blank">Medium</a>
-            <a href="https://www.facebook.com/profile.php?id=61577108068829" target="_blank">Facebook</a>
+        <div class="container">
+            <p>&copy; 2025 Nichole Higgins | The Phantom Ink Creative. All rights reserved.</p>
+            <p class="contact-heading">💌 Contact me!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nichole-higgins423/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://medium.com/@nhiggins11688" target="_blank" rel="noopener">Medium</a>
+                <a href="https://www.facebook.com/profile.php?id=61577108068829" target="_blank" rel="noopener">Facebook</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // Smooth scrolling for navigation links
@@ -716,6 +851,11 @@
                     });
                 }
             });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
 
         // Intersection Observer for fade-in animations
@@ -734,7 +874,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.point, .book-info, .author-info').forEach(el => {
+        document.querySelectorAll('.point, .book-info, .author-info, .chapter-item').forEach(el => {
             observer.observe(el);
         });
 
@@ -822,6 +962,27 @@
                     el.style.animationDelay = (index * 0.2) + 's';
                 }, 100);
             });
+            
+            // Lazy load images
+            const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+            
+            if ('IntersectionObserver' in window) {
+                const lazyImageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach((lazyImage) => {
+                    lazyImage.dataset.src = lazyImage.src;
+                    lazyImage.src = '';
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
         });
     </script>
 </body>
